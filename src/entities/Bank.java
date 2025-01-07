@@ -3,7 +3,6 @@ package entities;
 public class Bank {
 	private final int NUMERO_DA_CONTA;
 	private String nomeDoTitular;
-	private double depositoInicial;
 	private double saldo;
 
 	public Bank(int numeroDaConta, String nomeDoTitular){
@@ -14,7 +13,7 @@ public class Bank {
 	public Bank(int numeroDaConta, String nomeDoTitular, double depositoInicial){
 		this.NUMERO_DA_CONTA = numeroDaConta;
 		this.nomeDoTitular = nomeDoTitular;
-		this.depositoInicial = depositoInicial;
+		deposito(depositoInicial);
 	}
 
 	public int getNumeroDaConta(){
@@ -38,7 +37,7 @@ public class Bank {
 	}
 
 	public double saldoDaConta(){
-		return saldo + depositoInicial;
+		return saldo;
 	}
 
 	public String toString(){
